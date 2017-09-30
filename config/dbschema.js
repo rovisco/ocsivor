@@ -5,6 +5,8 @@ exports.mongoose = mongoose;
 
 var db_name = "nodejs";
 
+
+
 // Database connect
 var uristring = 'mongodb://localhost/test';
 
