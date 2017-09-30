@@ -1,0 +1,31 @@
+<% include header %>
+<% include messageModal %>
+
+<div class="container-fluid">
+<h3>Controlo de tomadas</h3>
+<p>&nbsp;</p>
+    <div class="row">
+      <div class="col-xs-6 col-md-4">
+            <p>
+             <% if (powerPlug.Switch1 == 1){ %>    
+                <img src="/assets/img/bulb_on.jpg" alt="Lights ON" class="img-responsive img-rounded">
+             <% }else{ %>
+                <img src="/assets/img/bulb_off.jpg" alt="Lights OFF" class="img-responsive img-rounded">
+             <%  } %>      
+        </div>
+      <div class="col-xs-6 col-md-4">
+         <% if (powerPlug.Switch1 == 1){ %>    
+                <a href="/domotics/turn/plug1/off" >
+                    <img src="/assets/img/switch_on.png" alt="Lights ON" class="img-responsive img-rounded">
+                </a>                                                                                           
+             <% }else{ %>
+                <a href="/domotics/turn/plug1/on" >
+                    <img src="/assets/img/switch_off.png" alt="Lights OFF" class="img-responsive img-rounded">
+                </a>    
+             <%  } %>       
+    </div>
+      <div class="col-xs-6 col-md-4"> &nbsp;</div>
+    </div>    
+</div>
+<!-- <%= powerPlug.Action %> Switch 1 is <%= powerPlug.Switch1 %> -->
+<% include footer %>

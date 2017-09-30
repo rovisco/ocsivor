@@ -1,0 +1,35 @@
+
+<div class="table-responsive">
+	<table class="table table-condensed">
+		<thead> <tr> 
+			<th>Username &nbsp
+				<div class="btn-group btn-group-xs">
+					<button type="button" class="btn btn-default"nohref onclick="sortCollection(userCollection,'username',true);refreshUsersList();return false;"><span class="glyphicon glyphicon-chevron-up"></button>
+					<button type="button" class="btn btn-default"nohref onclick="sortCollection(userCollection,'username',false);refreshUsersList();return false;"><span class="glyphicon glyphicon-chevron-down"></button>
+				</div>
+			</th> 
+			<th>E-mail &nbsp
+				<div class="btn-group btn-group-xs">
+					<button type="button" class="btn btn-default"nohref onclick="sortCollection(userCollection,'email',true);refreshUsersList();return false;"><span class="glyphicon glyphicon-chevron-up"></button>
+					<button type="button" class="btn btn-default"nohref onclick="sortCollection(userCollection,'email',false);refreshUsersList();return false;"><span class="glyphicon glyphicon-chevron-down"></button>
+				</div>
+			</th> 
+			<th>&nbsp</th> 
+		</tr> </thead>
+		<tbody>
+			<% for(var i=0; i<users.length; i++) { %>
+				<tr>
+					<td> <%= users[i].username %> </td>
+					<td> <a nohref onclick="return false;"> <%= users[i].email %> </a></td>
+					<td>
+						<!-- <a href="/user/delete/<%= users[i].username %>" class="btn btn-default btn-sm" role="button"><span class="glyphicon glyphicon-trash"> </a> -->
+						
+						<button type="button" class="btn btn-default" nohref onclick="confirmRemoveUser('<%= users[i].username %>');"><span class="glyphicon glyphicon-trash"></button>
+					</td>
+				</tr>
+			<% } %>
+		</tbody>
+	</table>
+</div>
+
+

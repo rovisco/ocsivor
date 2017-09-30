@@ -1,0 +1,23 @@
+<% include header %>
+<% include loginModal %>
+<% include forgotModal %>
+<% include messageModal %>
+
+<div class="container-fluid" id="mainBody">
+	<% if (!user) { %>
+		<h2>Welcome! Please log in.</h2>
+	<% } else { %>
+		<h2>Hello, <%= user.username %>.</h2>
+    <p>&nbsp;</p>
+    <div class="row">
+        <div class="col-xs-6 col-md-3">
+            <a href="/domotics/home" class="thumbnail"><i class="fa fa-plug fa-5x"></i> <h2>Controlo de tomadas</h2></a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <a href="/maps/home" class="thumbnail"><i class="fa fa-map-marker fa-5x"></i> <h2>Mapas</h2></a>
+        </div>
+    </div>
+
+    <% } %>
+</div>
+<% include footer %>

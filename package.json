@@ -1,0 +1,23 @@
+{
+  "name": "Maps",
+  "version": "0.0.1",
+  "dependencies": {
+    "async": "^0.9.0",
+    "bcrypt-nodejs": ">= 0.0.0",
+    "connect-flash": "0.1.x",
+    "ejs": "0.8.5",
+    "express": "3.x",
+    "mongodb": ">= 0.0.0",
+    "mongoose": ">= 0.0.0",
+    "nodemailer": "^1.3.0",
+    "passport": ">= 0.0.0",
+    "passport-local": ">= 0.0.0",
+    "superagent": "0.16.0",
+    "underscore": "1.6.0",
+    "grunt": "~0.4.1"  
+  },
+    "scripts": {
+        "start": "node server.js"
+    },
+    "main": "server.js"
+}

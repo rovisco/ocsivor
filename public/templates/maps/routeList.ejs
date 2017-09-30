@@ -1,0 +1,33 @@
+
+<div id="modal-template"></div>
+<div>
+    <h3><%= startTime %></h3> &nbsp;
+    <h3><%= speed %> </h3> 
+</div>
+<div class="table-responsive">
+	<table class="table table-condensed">
+		<thead> <tr> 
+            <th>Duration &nbsp </th> 
+            <th>Distance &nbsp </th> 
+            <th>Speed &nbsp </th> 
+            <th>Speed Read &nbsp </th> 
+            <th>Altitude &nbsp </th> 
+            <th>Event &nbsp </th> 
+            
+		</tr> </thead>
+		<tbody>
+			<% for(var i=0; i<points.length; i++) { %>
+				<tr>
+                    <td> <%= points[i].duration %> </td>
+                    <td> <%= points[i].distance %> </td>
+                    <td> <%= points[i].speed %> </td>
+                    <td> <%= points[i].speedRead %> </td>
+                    <td> <%= points[i].altitude %> </td>
+                    <td> <%= points[i].eventType %> </td>
+				</tr>
+			<% } %>
+		</tbody>
+	</table>
+</div>
+
+

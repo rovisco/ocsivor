@@ -1,0 +1,31 @@
+<div id="forgotModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Forgot Password</h4>
+      </div>
+	  <form role="form" action="/forgot" method="post" id="forgotForm" >
+      <div class="modal-body">
+		<div class="form-group">
+			<label class="col-sm-4 control-label" for="email">Enter your Email Address</label>
+			<div class="col-sm-8">
+				<input type="text" class="form-control" id="email" name="email" placeholder="email" required autofocus>
+			</div>
+		 </div>
+		 <div>&nbsp</div>
+		 <div id="forgotErrorAlert" class="alert alert-danger alert-dismissable" >
+			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+			<strong> Failed</strong> Please check the Email Address
+		</div>
+
+      </div>
+      <div class="modal-footer">
+        <button id="forgotButton" type="submit" class="btn btn-primary">Submit</button>
+		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+	  </form>	
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
