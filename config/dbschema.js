@@ -3,9 +3,10 @@ var mongoose = require('mongoose'),
 	SALT_WORK_FACTOR = 10;
 exports.mongoose = mongoose;
 
-var db_name = "nodejs";
+var db_name = "/nodejs";
 
 
+// mongodb://userNOA:VtlhEVTmBaWh0k3F@mongodb/nodejs
 
 // Database connect
 var uristring = 'mongodb://localhost/test';

@@ -1,4 +1,4 @@
-var express = require('express')
+ßvar express = require('express')
   , app = express()
   , db = require('./config/dbschema')
   , pass = require('./config/pass')
